@@ -2,14 +2,6 @@
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-                xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-                xmlns:rels="http://schemas.openxmlformats.org/package/2006/relationships"
-                xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"
-                xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
-                xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"
-                xmlns:dc="http://purl.org/dc/elements/1.1/"
-                xmlns:dcterms="http://purl.org/dc/terms/"
                 exclude-result-prefixes="*">
 
     <xsl:output method="xml" indent="yes"
@@ -17,14 +9,24 @@
             />
 
     <xsl:template match="/">
-    doc = {
-       <xsl:apply-templates />
-    }
-
+        <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
+        <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
+        <globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
+            <global_window_position top="50" left="50" height="500" width="700"/>
+            <global_log_window_position top="0" left="0" height="0" width="0"/>
+        </globals>
+        <preferences/>
+        <find_panel_settings/>
+        <vnodes>
+            <xsl:apply-templates mode="vnodes"/>
+        </vnodes>
+        <tnodes>
+        </tnodes>
+        </leo_file>
     </xsl:template>
 
     <!-- document properties .e.g title -->
-    <xsl:template match="head">
+    <xsl:template match="PLAY" mode="vnodes">
        properties : {
         <xsl:apply-templates/>
         },
@@ -50,6 +52,6 @@
           content : '<xsl:copy-of select="content"/>'
         },</xsl:template>
 
-    <xsl:template match="text()"><xsl:value-of select="translate(.,'�','')"/></xsl:template>
+    <xsl:template match="text()"></xsl:template>
 
 </xsl:stylesheet>

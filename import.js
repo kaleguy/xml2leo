@@ -35,7 +35,7 @@ function Convert(options) {
  * Set up object: read in XSL for transforms
  */
 Convert.prototype.init = function () {
-    fs.readFile(process.cwd() + "/leartoxml.xsl", (err, data) => {
+    fs.readFile(process.cwd() + "/shakespearetoleo.xsl", (err, data) => {
         if (err) {
             return console.error(err);
         }
@@ -65,7 +65,7 @@ Convert.prototype.import = function (sourcePath, outDir) {
         extname: path.extname(sourcePath),
         basename: path.basename(sourcePath, path.extname(sourcePath))
     };
-    sourceFile.outDir = outputDir + '/' + sourceFile.basename;
+    sourceFile.outDir = outputDir + '/'; // + sourceFile.basename;
 
     fs.readFile(sourcePath, (err, data) => {
         if (err) {
@@ -80,12 +80,22 @@ Convert.prototype.import = function (sourcePath, outDir) {
         }
         let xml = new DOMParser().parseFromString(data.toString());
         this.inXML = xml;
-        //callback();
+
+        const xslt = new XMLSerializer().serializeToString(this.XML2HTML);
+        xml = new XMLSerializer().serializeToString(this.inXML);
+        const config = {
+            xslt: xslt,
+            source: xml,
+            result: String,
+            props: {
+                indent: 'yes'
+            }
+        };
+        xslt4node.transform(config, (err, result) => {
+            _writeXML(result, 'shakespeare/output_document.xml')
+        });
+
     });
-
-
-
-    _getXMLAndTransform();
 
     /**
      * Need to read several XML files:
@@ -123,88 +133,20 @@ Convert.prototype.import = function (sourcePath, outDir) {
         });
     };
 
-    /**
-     * Put together the separate xml files unzipped from the docx file,
-     * then transform them with XSL.
-     * @private
-     */
-    let _getXMLAndTransform = function () {
-        let paths = [
-            'word/document.xml',
-            'word/_rels/document.xml.rels',
-            'docProps/core.xml',
-            'word/styles.xml',
-            'word/numbering.xml'
-        ];
-        let funcs = [];
-        paths.forEach((path) => {
-            funcs.push((callback) => {
-                _addXML(path, callback)
-            })
-        });
-        funcs.push(() => {
-            _writeWordXML().then(()=> _transform());
-        });
-        async.series(funcs);
-    };
-
-    /**
-     * Once we have all of the doc xml files loaded into a DOM object,
-     * we will apply the XSL to get the intermediate XML which we can
-     * easily transform into JSON and other formats
-     * @private
-     */
-    let _transform = () => {
-
-        const xslt = new XMLSerializer().serializeToString(this.XML2HTML);
-        const xml = new XMLSerializer().serializeToString(this.inXML);
-        const config = {
-            xslt: xslt,
-            source: xml,
-            result: String,
-            props: {
-                indent: 'yes'
-            }
-        };
-        xslt4node.transform(config, (err, result) => {
-            _writeXML(result, '/word/output_document.xml')
-                .then(() => _createJsonOutput(result))
-                .then(() => _cleanup());
-        });
-
-    };
-
-    let _writeWordXML = () => {
-        return _writeXML(this.inXML, 'word/imported_document.xml');
-    };
 
     let _writeXML = (xml, filePath) => {
         let deferred = Q.defer();
         let xmlString = new XMLSerializer().serializeToString(xml);
-        fs.writeFile(sourceFile.outDir + '/.tmp/' + filePath, xmlString, (err) => {
+        fs.writeFile(sourceFile.outDir + filePath, xmlString, (err) => {
             if (err) {
                 console.log(err);
                 return deferred.reject(err);
             }
+            console.log('Done.');
             return deferred.resolve();
         });
         return deferred.promise;
     };
-
-    let _cleanup = ()=> {
-        try {
-            fs.copySync(sourceFile.outDir + '/.tmp/word/media', sourceFile.outDir + '/media');
-        } catch(e){
-            // no media files
-        }
-        if (!config.no_cleanup) {
-            fs.removeSync(sourceFile.outDir + '/.tmp');
-        }
-        process.exit(0);
-    };
-
-    // start the import process
-    _extract(path);
 
 };
 
