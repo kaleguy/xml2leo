@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <PLAY>
 <TITLE>The Tragedy of King Lear</TITLE>
 <FM>
@@ -6566,8 +6567,16 @@ Holds it true, sir, that the Duke of Cornwall was so slain?
 <SCENE>
 <TITLE>SCENE I. The British camp, near Dover.</TITLE>
 <STAGEDIR>
-Enter, with drum and colours, EDMUND, REGAN, Gentlemen, and Soldiers. EDMUND Know of the duke if his last purpose hold, Or whether since he is advised by aught To change the course: he's full of alteration And self-reproving: bring his constant pleasure. [To a Gentleman, who goes out
+Enter, with drum and colours, EDMUND, REGAN, Gentlemen, and Soldiers.
 </STAGEDIR>
+<SPEECH>
+<SPEAKER>EDMUND</SPEAKER>
+<LINE>Know of the duke if his last purpose hold,</LINE>
+<LINE>Or whether since he is advised by aught</LINE>
+<LINE>To change the course: he's full of alteration</LINE>
+<LINE>And self-reproving: bring his constant pleasure.</LINE>
+</SPEECH>
+<STAGEDIR>To a Gentleman, who goes out</STAGEDIR>
 <SPEECH>
 <SPEAKER>REGAN</SPEAKER>
 <LINE>Our sister's man is certainly miscarried.</LINE>
