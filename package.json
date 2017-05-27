@@ -4,6 +4,7 @@
   "description": "Convert from .docx to JSON.",
   "main": "w2j.js",
   "scripts": {
+    "shakespeare": "./2leo.js input/shakespeare output/shakespeare shakespearetoleo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

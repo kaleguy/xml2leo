@@ -7,14 +7,9 @@ const xslt4node = require('xslt4node');
 const fs = require('fs-extra');
 const DOMParser = require('xmldom').DOMParser;
 const XMLSerializer = require('xmldom').XMLSerializer;
-const async = require('async');
 const _ = require('lodash');
-const Q = require('q');
 const mv = require('mv');
-const Datauri = require('datauri');
 const md = require('html-md');
-const table = require('gfm-table');
-const json = require('format-json');
 let config = {};
 
 /**
@@ -27,137 +22,118 @@ function Convert(options) {
     if (!(this instanceof Convert)) {
         return new Convert(options);
     }
-    this.init();
     config = options;
 }
 
 /**
  * Set up object: read in XSL for transforms
  */
-Convert.prototype.init = function () {
-    fs.readFile(process.cwd() + "/shakespearetoleo.xsl", (err, data) => {
-        if (err) {
-            return console.error(err);
-        }
-        this.XML2HTML = new DOMParser().parseFromString(data.toString());
+Convert.prototype.init = function (xslfile) {
+    const p = new Promise((resolve, reject) => {
+        fs.readFile(process.cwd() + "/" + xslfile + ".xsl", (err, data) => {
+            if (err) {
+                return console.error(err);
+            }
+            this.XML2HTML = new DOMParser().parseFromString(data.toString());
+            if (!this.XML2HTML) {
+                console.log('Unable to process XSL file');
+                process.exit();
+                reject();
+            }
+            this.inXML = null;
+            console.log('Initialized.');
+            resolve();
+        });
     });
-    this.inXML = null;
-    console.log('Initialized.')
+    return p;
 };
 
-/**
- * Main import function
- * @param {string } sourcePath - path to input docx file.
- * @param {string } outDir - output folder
- */
-Convert.prototype.import = function (sourcePath, outDir) {
+Convert.prototype.importFolder = function (inDir, outDir) {
 
-    if (outDir) {
-        outputDir = outDir;
-    }
-
-    this.inXML = null;
-
-    let sourceFile = {
-        path: sourcePath,
-        name: path.basename(sourcePath),
-        dir: path.dirname(sourcePath) + '',
-        extname: path.extname(sourcePath),
-        basename: path.basename(sourcePath, path.extname(sourcePath))
-    };
-    sourceFile.outDir = outputDir + '/'; // + sourceFile.basename;
-
-    fs.readFile(sourcePath, (err, data) => {
-        if (err) {
-            if ('ENOENT' !== err.code) {
-                console.error("addXML:", err);
-            }
-            if ('ENOENT' === err.code) {
-                console.log('File not found in add XML:', filePath);
-            }
-            return;
-            // return callback();
+    const queue = [];
+    fs.readdirSync(inDir).forEach(file => {
+        if (/\.xml$/.test(file)) {
+            queue.push(() => this.importFile(inDir, outDir, file));
         }
-        let xml = new DOMParser().parseFromString(data.toString());
-        this.inXML = xml;
-
-        const xslt = new XMLSerializer().serializeToString(this.XML2HTML);
-        xml = new XMLSerializer().serializeToString(this.inXML);
-        const config = {
-            xslt: xslt,
-            source: xml,
-            result: String,
-            props: {
-                indent: 'yes'
-            }
-        };
-        xslt4node.transform(config, (err, result) => {
-            _writeXML(result, 'shakespeare/output_document.xml')
-        });
-
     });
+    queue.reduce((p, f) => p.then(f),  Promise.resolve())
+         .then(() => {
+           console.log('Finished');
+           return process.exit(0);
+         });
+};
 
-    /**
-     * Need to read several XML files:
-     *   the main document.xml,
-     *   the rels file (which contains links to the images),
-     *   the core.xml file which has properties like title etc.
-     * Append one to the other, and then we can call transform.
-     *
-     * The next two functions perform these tasks
-     * @param {string} xmlPath to xml file
-     * @param {function} callback (so we can use with async library, see _getXML)
-     * @private
-     */
-    let _addXML = (xmlPath, callback) => {
-        let filePath = sourceFile.outDir + '/.tmp/' + xmlPath;
-        fs.readFile(filePath, (err, data) => {
+Convert.prototype.importFile = function (inDir, outDir, file) {
+
+    const p = new Promise((resolve, reject) => {
+
+        if (outDir) {
+            outputDir = outDir;
+        }
+
+        this.inXML = null;
+
+        fs.readFile(inDir + '/' + file, (err, data) => {
             if (err) {
                 if ('ENOENT' !== err.code) {
                     console.error("addXML:", err);
                 }
                 if ('ENOENT' === err.code) {
-                    console.log('File not found in add XML:', filePath);
+                    console.log('File not found in add XML:', inDir, file);
                 }
-                return callback();
+                return;
+                // return callback();
             }
             let xml = new DOMParser().parseFromString(data.toString());
-            if (!this.inXML) {
-                this.inXML = xml;
-            } else {
-                this.inXML.documentElement.appendChild(
-                    this.inXML.importNode(xml.documentElement, true)
-                );
-            }
-            callback();
-        });
-    };
+            this.inXML = xml;
 
-
-    let _writeXML = (xml, filePath) => {
-        let deferred = Q.defer();
-        let xmlString = new XMLSerializer().serializeToString(xml);
-        fs.writeFile(sourceFile.outDir + filePath, xmlString, (err) => {
-            if (err) {
-                console.log(err);
-                return deferred.reject(err);
+            if (!this.XML2HTML) {
+                console.log('Bad XSL file');
+                reject();
+                process.exit();
             }
-            console.log('Done.');
-            return deferred.resolve();
+            const xslt = new XMLSerializer().serializeToString(this.XML2HTML);
+            xml = new XMLSerializer().serializeToString(this.inXML);
+            const config = {
+                xslt: xslt,
+                source: xml,
+                result: String,
+                props: {
+                    indent: 'yes'
+                }
+            };
+            xslt4node.transform(config, (err, result) => {
+                if (err) {
+                    console.log('Error', err);
+                    reject();
+                }
+                file = file.substring(0, file.lastIndexOf('.'));
+                console.log('Writing file: ', file);
+                _writeXML(result, outDir + '/' + file + '.leo')
+                    .then(() => resolve())
+            });
+
         });
-        return deferred.promise;
-    };
+
+        let _writeXML = (xml, filePath) => {
+            return new Promise((resolve, reject) => {
+                let xmlString = new XMLSerializer().serializeToString(xml);
+                fs.writeFile(filePath, xmlString, (err) => {
+                    if (err) {
+                        console.log(err);
+                        return reject(err);
+                    }
+                    console.log('Written to: ', filePath);
+                    return resolve();
+                });
+            })
+        };
+
+    });
+    return p;
 
 };
 
-/**
- * Utility function, takes an array and an element, gets all
- * child data from list item nodes. Returns nested arrays
- * corresponding to the DOM subtree.
- * @param list
- * @param el
- * @returns {*}
- */
 function domListToJson(list, el) {
 
     if (el.tagName === 'li') {

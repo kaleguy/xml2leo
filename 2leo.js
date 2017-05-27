@@ -10,34 +10,52 @@ if (argv.help){
 
 function displayHelp(){
     console.log(`
-    Script to convert xml files to leo format.
+    Script to convert xml files to leo format. Converts all xml files in
+    input folder into leo files in output folder.
 
-    Usage: node 2leo.js input/myfile
+    Required parameters:
+    indir: the folder where the input xml files are
+    outdir: the folder you want the output files to go into
+    xslfile: the xsl file that specifies the transformation rules
+
+    Usage: node 2leo.js indir outdir xslfile
 
     Or, to run at command line, check first line of 2leo.js and
-    then run ./2leo.js path_to_file
+    then run ./2leo.js indir outdir
 
     Options:
       --help: this message
-      --outdir=path/to/output: output directory, default is 'output'
-      --datauri: if true, convert image files to inline data
     `);
     process.exit(0);
 }
 
-var path = (argv._[0]);
-if (! path){
-    console.log("\n=== No path specified! More info about this program:");
+var indir = (argv._[0]);
+if (! indir){
+    console.log("\n=== No input folder specified! More info about this program:");
+    displayHelp();
+    process.exit(0);
+}
+var outdir = (argv._[1]);
+if (! outdir ){
+    console.log("\n=== No output folder specified! More info about this program:");
+    displayHelp();
+    process.exit(0);
+}
+var xslfile = (argv._[2]);
+if (! xslfile ){
+    console.log("\n=== No input folder specified! More info about this program:");
     displayHelp();
     process.exit(0);
 }
 var converter = new Converter(argv);
 
-fs.stat(path, (err, stat) => {
+fs.stat(indir, (err, stat) => {
     if(err == null) {
-        converter.import(path, argv.outdir);
+        converter.init(xslfile).then(() => {
+            converter.importFolder(indir, outdir);
+        })
     } else {
-        console.log('Invalid file path: ' + path + '\n\n', err);
+        console.log('Invalid input folder: ' + '\n\n', err);
         process.exit();
     }
 });

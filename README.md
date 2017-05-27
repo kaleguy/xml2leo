@@ -3,6 +3,14 @@
 This is a basic command-line utility for for converting various xml formats
 to .leo format. Leo is an open source outlining editor.
 
+Currently the only format supported is for Shakespeare's plays.
+
+To run the Shakespeare imports:
+
+    npm run shakespeare 
+
+To create a new transformation type, edit the example shakespearetoleo.xsl file.
+
 ## Installation
 
 This script uses the npm java module. In order to get this to run with more recent versions of Java,
@@ -27,18 +35,16 @@ If you get node-gyp errors, it may be because you need to install Java.
 
 ## Use
 
-To convert a document, place it in the 'input' folder, then run (example, from
-terminal window in project folder):
+To convert xml files to leo format, run::
 
-    node 2leo.js input/myfile
+    node 2leo.js infolder outfolder xslfile
 
 Or run as command line script:
 
     chmod +x 2leo.js
 
-    node 2leo.js input/myfile
+    ./2leo.js infolder outfolder xslfile
     
-The output files will be written to the 'output' folder.
 
 For more options run
 
