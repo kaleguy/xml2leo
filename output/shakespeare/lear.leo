@@ -174,7 +174,7 @@
 </v>
 </vnodes>
 <tnodes>
-<t tx="N65540">
+<t tx="N65540">@language html
             &lt;div class='ptitle' &gt;The Tragedy of King Lear&lt;/div&gt;&lt;div class='pdetail' &gt;
 Text placed in the public domain by Moby Lexical Tools, 1992.
 &lt;/div&gt;

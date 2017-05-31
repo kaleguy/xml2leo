@@ -192,7 +192,7 @@
 </v>
 </vnodes>
 <tnodes>
-<t tx="N65540">
+<t tx="N65540">@language html
             &lt;div class='ptitle' &gt;The Tragedy of Julius Caesar&lt;/div&gt;&lt;div class='pdetail' &gt;Text placed in the public domain by Moby Lexical Tools, 1992.&lt;/div&gt;
     &lt;div class='pdetail' &gt;SGML markup by Jon Bosak, 1992-1994.&lt;/div&gt;
     &lt;div class='pdetail' &gt;XML version by Jon Bosak, 1996-1998.&lt;/div&gt;

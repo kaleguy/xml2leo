@@ -35,7 +35,7 @@
     </xsl:template>
 
     <xsl:template match="PLAY/TITLE" mode="tx">
-        <t tx="{generate-id(.)}">
+        <t tx="{generate-id(.)}">@language html
             &lt;div class='ptitle' &gt;<xsl:value-of select="."/>&lt;/div&gt;<xsl:apply-templates select="//FM/P"/></t></xsl:template>
 
     <xsl:template match="P">&lt;div class='pdetail' &gt;<xsl:value-of select="."/>&lt;/div&gt;

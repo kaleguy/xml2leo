@@ -19,6 +19,14 @@
 <v t="josephorr.20170527211440.1"><vh>[Cymbelin](cymbelin.leo)</vh></v>
 <v t="josephorr.20170527150106.1"><vh>[Hamlet](hamlet.leo)</vh></v>
 <v t="josephorr.20170527150114.1"><vh>[King Lear](lear.leo)</vh></v>
+<v t="josephorr.20170530220344.1"><vh>[King Henry IV, Part 1](henry4part1.leo)</vh></v>
+<v t="josephorr.20170530220447.1"><vh>[King Henry IV, Part 2](henry4part2.leo)</vh></v>
+<v t="josephorr.20170530220451.1"><vh>[King Henry V](henry5.leo)</vh></v>
+<v t="josephorr.20170530220454.1"><vh>[King Henry VI, Part 1](henry6part1.leo)</vh></v>
+<v t="josephorr.20170530220508.1"><vh>[King Henry VI, Part 2](henry6part2.leo)</vh></v>
+<v t="josephorr.20170530220510.1"><vh>[King Henry VI, Part 3](henry6part3.leo)</vh></v>
+<v t="josephorr.20170530220512.1"><vh>[King Henry VII, Part 1](henry8.leo)</vh></v>
+<v t="josephorr.20170530220518.1"><vh>[Julius Ceasar](juliusceasar.leo)</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -32,5 +40,13 @@
 <t tx="josephorr.20170527211412.1"></t>
 <t tx="josephorr.20170527211440.1"></t>
 <t tx="josephorr.20170527211520.1"></t>
+<t tx="josephorr.20170530220344.1"></t>
+<t tx="josephorr.20170530220447.1"></t>
+<t tx="josephorr.20170530220451.1"></t>
+<t tx="josephorr.20170530220454.1"></t>
+<t tx="josephorr.20170530220508.1"></t>
+<t tx="josephorr.20170530220510.1"></t>
+<t tx="josephorr.20170530220512.1"></t>
+<t tx="josephorr.20170530220518.1"></t>
 </tnodes>
 </leo_file>
