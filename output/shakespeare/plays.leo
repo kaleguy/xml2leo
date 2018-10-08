@@ -136,7 +136,13 @@
 </v>
 </vnodes>
 <tnodes>
-<t tx="josephorr.20170527150047.2"></t>
+<t tx="josephorr.20170527150047.2">@language html
+&lt;div class='ptitle' &gt;Plays of William Shakespeare&lt;/div&gt;
+&lt;div class='pdetail' &gt;Text placed in the public domain by Moby Lexical Tools, 1992.&lt;/div&gt;
+&lt;div class='pdetail' &gt;SGML markup by Jon Bosak, 1992-1994.&lt;/div&gt;
+&lt;div class='pdetail' &gt;XML version by Jon Bosak, 1996-1998.&lt;/div&gt;
+&lt;div class='pdetail' &gt;This work may be freely copied and distributed worldwide.&lt;/div&gt;
+</t>
 <t tx="josephorr.20170527150106.1"></t>
 <t tx="josephorr.20170527150114.1"></t>
 <t tx="josephorr.20170527211202.1"></t>
