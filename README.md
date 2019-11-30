@@ -1,3 +1,6 @@
+[![Dependency Status](https://david-dm.org/kaleguy/xml2leo.svg)](https://david-dm.org/kaleguy/xml2leo)
+
+
 ## Xml to Leo
 
 This is a basic command-line utility for for converting various xml formats
