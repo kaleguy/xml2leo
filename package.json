@@ -1,6 +1,6 @@
 {
   "name": "docx-converter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Convert from .docx to JSON.",
   "main": "w2j.js",
   "scripts": {
