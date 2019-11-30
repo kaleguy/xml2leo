@@ -50,6 +50,8 @@ For more options run
 
     node 2leo.js  --help
     
+Removed html-md due to inability to compile.    
+    
 ## License
  
 MIT    

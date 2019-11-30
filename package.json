@@ -5,6 +5,7 @@
   "main": "w2j.js",
   "scripts": {
     "shakespeare": "./2leo.js input/shakespeare output/shakespeare shakespearetoleo",
+    "countries": "./2leo.js input/countries output/countries countriestoleo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -20,22 +21,22 @@
   "author": "kaleguy",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.0.0-rc.6",
+    "async": "^3.1.0",
     "data-uri": "0.0.3",
-    "datauri": "^1.0.4",
-    "extract-zip": "^1.5.0",
-    "file-exists": "^1.0.0",
-    "file-extension": "^2.0.1",
+    "datauri": "^2.0.0",
+    "extract-zip": "^1.6.7",
+    "file-exists": "^5.0.1",
+    "file-extension": "^4.0.5",
     "format-json": "^1.0.3",
-    "fs-extra": "^0.30.0",
+    "fs-extra": "^8.1.0",
     "gfm-table": "^0.1.0",
-    "html-md": "^3.0.2",
+    "java": "^0.12.0",
     "lodash": "^4.13.1",
     "minimist": "^1.2.0",
     "mv": "^2.1.1",
-    "q": "^1.4.1",
-    "xmldom": "^0.1.22",
-    "xslt4node": "^0.3.1"
+    "q": "^1.5.1",
+    "xmldom": "^0.1.27",
+    "xslt4node": "^0.3.2"
   },
   "devDependencies": {
     "jsdoc": "^3.4.0"

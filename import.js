@@ -8,8 +8,8 @@ const fs = require('fs-extra');
 const DOMParser = require('xmldom').DOMParser;
 const XMLSerializer = require('xmldom').XMLSerializer;
 const _ = require('lodash');
-const mv = require('mv');
-const md = require('html-md');
+// const mv = require('mv');
+// const md = require('html-md');
 let config = {};
 
 /**
@@ -117,8 +117,8 @@ Convert.prototype.importFile = function (inDir, outDir, file) {
 
         let _writeXML = (xml, filePath) => {
             return new Promise((resolve, reject) => {
-                let xmlString = new XMLSerializer().serializeToString(xml);
-                fs.writeFile(filePath, xmlString, (err) => {
+                // let xmlString = new XMLSerializer().serializeToString(xml);
+                fs.writeFile(filePath, xml, (err) => {
                     if (err) {
                         console.log(err);
                         return reject(err);

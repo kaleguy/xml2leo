@@ -1,103 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
-<leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
+<?xml version="1.0" encoding="UTF-8"?>
+        <leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1">
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
 <globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
-	<global_window_position top="50" left="50" height="500" width="700"/>
-	<global_log_window_position top="0" left="0" height="0" width="0"/>
+<global_window_position top="50" left="50" height="500" width="700"/>
+<global_log_window_position top="0" left="0" height="0" width="0"/>
 </globals>
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="N65540" a="E"><vh>The Tragedy of Antony and Cleopatra</vh>
-<v t="N65558"><vh>Dramatis Personae</vh>
-<v t="N65565"><vh>MARK ANTONY</vh></v>
-<v t="N65568"><vh>OCTAVIUS CAESAR</vh></v>
-<v t="N65571"><vh>M. AEMILIUS LEPIDUS</vh></v>
-<v t="N65578"><vh>SEXTUS POMPEIUS</vh></v>
-<v t="N65583"><vh>DOMITIUS ENOBARBUS</vh></v>
-<v t="N65586"><vh>VENTIDIUS</vh></v>
-<v t="N65589"><vh>EROS</vh></v>
-<v t="N65592"><vh>SCARUS</vh></v>
-<v t="N65595"><vh>DERCETAS</vh></v>
-<v t="N65598"><vh>DEMETRIUS</vh></v>
-<v t="N65601"><vh>PHILO</vh></v>
-<v t="N65610"><vh>MECAENAS</vh></v>
-<v t="N65613"><vh>AGRIPPA</vh></v>
-<v t="N65616"><vh>DOLABELLA</vh></v>
-<v t="N65619"><vh>PROCULEIUS</vh></v>
-<v t="N65622"><vh>THYREUS</vh></v>
-<v t="N65625"><vh>GALLUS</vh></v>
-<v t="N65628"><vh>MENAS</vh></v>
-<v t="N65637"><vh>MENECRATES</vh></v>
-<v t="N65640"><vh>VARRIUS</vh></v>
-<v t="N65647"><vh>TAURUS, lieutenant-general to Caesar.</vh></v>
-<v t="N65650"><vh>CANIDIUS, lieutenant-general to Antony.</vh></v>
-<v t="N65653"><vh>SILIUS, an officer in Ventidius's army.</vh></v>
-<v t="N65656"><vh>EUPHRONIUS, an ambassador from Antony to Caesar.</vh></v>
-<v t="N65661"><vh>ALEXAS</vh></v>
-<v t="N65664"><vh>MARDIAN, a Eunuch.</vh></v>
-<v t="N65667"><vh>SELEUCUS</vh></v>
-<v t="N65670"><vh>DIOMEDES</vh></v>
-<v t="N65677"><vh>A Soothsayer.</vh></v>
-<v t="N65680"><vh>A Clown.</vh></v>
-<v t="N65683"><vh>CLEOPATRA, queen of Egypt.</vh></v>
-<v t="N65686"><vh>OCTAVIA, sister to Caesar and wife to Antony.</vh></v>
-<v t="N65691"><vh>CHARMIAN</vh></v>
-<v t="N65694"><vh>IRAS</vh></v>
-<v t="N65701"><vh>Officers, Soldiers, Messengers, and other Attendants.</vh></v>
+<v t="N65540">
+<vh>The Tragedy of Antony and Cleopatra</vh>
+<v t="N65558">
+<vh>Dramatis Personae</vh>Dramatis Personae<v t="N65565">
+<vh>MARK ANTONY</vh>
 </v>
-<v t="N65711"><vh>ACT I</vh>
-<v t="N65715"><vh>SCENE I. Alexandria. A room in CLEOPATRA's palace.</vh></v>
-<v t="N66053"><vh>SCENE II. The same. Another room.</vh></v>
-<v t="N67264"><vh>SCENE III. The same. Another room.</vh></v>
-<v t="N67893"><vh>SCENE IV. Rome. OCTAVIUS CAESAR's house.</vh></v>
-<v t="N68273"><vh>SCENE V. Alexandria. CLEOPATRA's palace.</vh></v>
+<v t="N65568">
+<vh>OCTAVIUS CAESAR</vh>
 </v>
-<v t="N68747" a="E"><vh>ACT II</vh>
-<v t="N68751"><vh>SCENE I. Messina. POMPEY's house.</vh></v>
-<v t="N69029"><vh>SCENE II. Rome. The house of LEPIDUS.</vh></v>
-<v t="N70456"><vh>SCENE III. The same. OCTAVIUS CAESAR's house.</vh></v>
-<v t="N70701"><vh>SCENE IV. The same. A street.</vh></v>
-<v t="N70799"><vh>SCENE V. Alexandria. CLEOPATRA's palace.</vh></v>
-<v t="N71620"><vh>SCENE VI. Near Misenum.</vh></v>
-<v t="N72533"><vh>SCENE VII. On board POMPEY's galley, off Misenum.</vh></v>
+<v t="N65571">
+<vh>M. AEMILIUS LEPIDUS</vh>
 </v>
-<v t="N73505"><vh>ACT III</vh>
-<v t="N73509"><vh>SCENE I. A plain in Syria.</vh></v>
-<v t="N73688"><vh>SCENE II. Rome. An ante-chamber in OCTAVIUS CAESAR's house.</vh></v>
-<v t="N74198"><vh>SCENE III. Alexandria. CLEOPATRA's palace.</vh></v>
-<v t="N74647"><vh>SCENE IV. Athens. A room in MARK ANTONY's house.</vh></v>
-<v t="N74811"><vh>SCENE V. The same. Another room.</vh></v>
-<v t="N74969"><vh>SCENE VI. Rome. OCTAVIUS CAESAR's house.</vh></v>
-<v t="N75484"><vh>SCENE VII. Near Actium. MARK ANTONY's camp.</vh></v>
-<v t="N76043"><vh>SCENE VIII. A plain near Actium.</vh></v>
-<v t="N76090"><vh>SCENE IX. Another part of the plain.</vh></v>
-<v t="N76119"><vh>SCENE X. Another part of the plain.</vh></v>
-<v t="N76364"><vh>SCENE XI. Alexandria. CLEOPATRA's palace.</vh></v>
-<v t="N76792"><vh>SCENE XII. Egypt. OCTAVIUS CAESAR's camp.</vh></v>
-<v t="N77012"><vh>SCENE XIII. Alexandria. CLEOPATRA's palace.</vh></v>
+<v t="N65578">
+<vh>SEXTUS POMPEIUS</vh>
 </v>
-<v t="N78183"><vh>ACT IV</vh>
-<v t="N78187"><vh>SCENE I. Before Alexandria. OCTAVIUS CAESAR's camp.</vh></v>
-<v t="N78270"><vh>SCENE II. Alexandria. CLEOPATRA's palace.</vh></v>
-<v t="N78568"><vh>SCENE III. The same. Before the palace.</vh></v>
-<v t="N78845"><vh>SCENE IV. The same. A room in the palace.</vh></v>
-<v t="N79114"><vh>SCENE V. Alexandria. MARK ANTONY's camp.</vh></v>
-<v t="N79266"><vh>SCENE VI. Alexandria. OCTAVIUS CAESAR's camp.</vh></v>
-<v t="N79481"><vh>SCENE VII. Field of battle between the camps.</vh></v>
-<v t="N79624"><vh>SCENE VIII. Under the walls of Alexandria.</vh></v>
-<v t="N79809"><vh>SCENE IX. OCTAVIUS CAESAR's camp.</vh></v>
-<v t="N80069"><vh>SCENE X. Between the two camps.</vh></v>
-<v t="N80128"><vh>SCENE XI. Another part of the same.</vh></v>
-<v t="N80157"><vh>SCENE XII. Another part of the same.</vh></v>
-<v t="N80381"><vh>SCENE XIII. Alexandria. Cleopatra's palace.</vh></v>
-<v t="N80449"><vh>SCENE XIV. The same. Another room.</vh></v>
-<v t="N81345"><vh>SCENE XV. The same. A monument.</vh></v>
+<v t="N65583">
+<vh>DOMITIUS ENOBARBUS</vh>
 </v>
-<v t="N81861"><vh>ACT V</vh>
-<v t="N81865"><vh>SCENE I. Alexandria. OCTAVIUS CAESAR's camp.</vh></v>
-<v t="N82299"><vh>SCENE II. Alexandria. A room in the monument.</vh></v>
+<v t="N65586">
+<vh>VENTIDIUS</vh>
+</v>
+<v t="N65589">
+<vh>EROS</vh>
+</v>
+<v t="N65592">
+<vh>SCARUS</vh>
+</v>
+<v t="N65595">
+<vh>DERCETAS</vh>
+</v>
+<v t="N65598">
+<vh>DEMETRIUS</vh>
+</v>
+<v t="N65601">
+<vh>PHILO</vh>
+</v>
+<v t="N65610">
+<vh>MECAENAS</vh>
+</v>
+<v t="N65613">
+<vh>AGRIPPA</vh>
+</v>
+<v t="N65616">
+<vh>DOLABELLA</vh>
+</v>
+<v t="N65619">
+<vh>PROCULEIUS</vh>
+</v>
+<v t="N65622">
+<vh>THYREUS</vh>
+</v>
+<v t="N65625">
+<vh>GALLUS</vh>
+</v>
+<v t="N65628">
+<vh>MENAS</vh>
+</v>
+<v t="N65637">
+<vh>MENECRATES</vh>
+</v>
+<v t="N65640">
+<vh>VARRIUS</vh>
+</v>
+<v t="N65647">
+<vh>TAURUS, lieutenant-general to Caesar.</vh>
+</v>
+<v t="N65650">
+<vh>CANIDIUS, lieutenant-general to Antony.</vh>
+</v>
+<v t="N65653">
+<vh>SILIUS, an officer in Ventidius's army.</vh>
+</v>
+<v t="N65656">
+<vh>EUPHRONIUS, an ambassador from Antony to Caesar.</vh>
+</v>
+<v t="N65661">
+<vh>ALEXAS</vh>
+</v>
+<v t="N65664">
+<vh>MARDIAN, a Eunuch.</vh>
+</v>
+<v t="N65667">
+<vh>SELEUCUS</vh>
+</v>
+<v t="N65670">
+<vh>DIOMEDES</vh>
+</v>
+<v t="N65677">
+<vh>A Soothsayer.</vh>
+</v>
+<v t="N65680">
+<vh>A Clown.</vh>
+</v>
+<v t="N65683">
+<vh>CLEOPATRA, queen of Egypt.</vh>
+</v>
+<v t="N65686">
+<vh>OCTAVIA, sister to Caesar and wife to Antony.</vh>
+</v>
+<v t="N65691">
+<vh>CHARMIAN</vh>
+</v>
+<v t="N65694">
+<vh>IRAS</vh>
+</v>
+<v t="N65701">
+<vh>Officers, Soldiers, Messengers, and other Attendants.</vh>
+</v>
+</v>
+<v t="N65711">
+<vh>ACT I</vh>
+<v t="N65715">
+<vh>SCENE I. Alexandria. A room in CLEOPATRA's palace.</vh>
+</v>
+<v t="N66053">
+<vh>SCENE II. The same. Another room.</vh>
+</v>
+<v t="N67264">
+<vh>SCENE III. The same. Another room.</vh>
+</v>
+<v t="N67893">
+<vh>SCENE IV. Rome. OCTAVIUS CAESAR's house.</vh>
+</v>
+<v t="N68273">
+<vh>SCENE V. Alexandria. CLEOPATRA's palace.</vh>
+</v>
+</v>
+<v t="N68747">
+<vh>ACT II</vh>
+<v t="N68751">
+<vh>SCENE I. Messina. POMPEY's house.</vh>
+</v>
+<v t="N69029">
+<vh>SCENE II. Rome. The house of LEPIDUS.</vh>
+</v>
+<v t="N70456">
+<vh>SCENE III. The same. OCTAVIUS CAESAR's house.</vh>
+</v>
+<v t="N70701">
+<vh>SCENE IV. The same. A street.</vh>
+</v>
+<v t="N70799">
+<vh>SCENE V. Alexandria. CLEOPATRA's palace.</vh>
+</v>
+<v t="N71620">
+<vh>SCENE VI. Near Misenum.</vh>
+</v>
+<v t="N72533">
+<vh>SCENE VII. On board POMPEY's galley, off Misenum.</vh>
+</v>
+</v>
+<v t="N73505">
+<vh>ACT III</vh>
+<v t="N73509">
+<vh>SCENE I. A plain in Syria.</vh>
+</v>
+<v t="N73688">
+<vh>SCENE II. Rome. An ante-chamber in OCTAVIUS CAESAR's house.</vh>
+</v>
+<v t="N74198">
+<vh>SCENE III. Alexandria. CLEOPATRA's palace.</vh>
+</v>
+<v t="N74647">
+<vh>SCENE IV. Athens. A room in MARK ANTONY's house.</vh>
+</v>
+<v t="N74811">
+<vh>SCENE V. The same. Another room.</vh>
+</v>
+<v t="N74969">
+<vh>SCENE VI. Rome. OCTAVIUS CAESAR's house.</vh>
+</v>
+<v t="N75484">
+<vh>SCENE VII. Near Actium. MARK ANTONY's camp.</vh>
+</v>
+<v t="N76043">
+<vh>SCENE VIII. A plain near Actium.</vh>
+</v>
+<v t="N76090">
+<vh>SCENE IX. Another part of the plain.</vh>
+</v>
+<v t="N76119">
+<vh>SCENE X. Another part of the plain.</vh>
+</v>
+<v t="N76364">
+<vh>SCENE XI. Alexandria. CLEOPATRA's palace.</vh>
+</v>
+<v t="N76792">
+<vh>SCENE XII. Egypt. OCTAVIUS CAESAR's camp.</vh>
+</v>
+<v t="N77012">
+<vh>SCENE XIII. Alexandria. CLEOPATRA's palace.</vh>
+</v>
+</v>
+<v t="N78183">
+<vh>ACT IV</vh>
+<v t="N78187">
+<vh>SCENE I. Before Alexandria. OCTAVIUS CAESAR's camp.</vh>
+</v>
+<v t="N78270">
+<vh>SCENE II. Alexandria. CLEOPATRA's palace.</vh>
+</v>
+<v t="N78568">
+<vh>SCENE III. The same. Before the palace.</vh>
+</v>
+<v t="N78845">
+<vh>SCENE IV. The same. A room in the palace.</vh>
+</v>
+<v t="N79114">
+<vh>SCENE V. Alexandria. MARK ANTONY's camp.</vh>
+</v>
+<v t="N79266">
+<vh>SCENE VI. Alexandria. OCTAVIUS CAESAR's camp.</vh>
+</v>
+<v t="N79481">
+<vh>SCENE VII. Field of battle between the camps.</vh>
+</v>
+<v t="N79624">
+<vh>SCENE VIII. Under the walls of Alexandria.</vh>
+</v>
+<v t="N79809">
+<vh>SCENE IX. OCTAVIUS CAESAR's camp.</vh>
+</v>
+<v t="N80069">
+<vh>SCENE X. Between the two camps.</vh>
+</v>
+<v t="N80128">
+<vh>SCENE XI. Another part of the same.</vh>
+</v>
+<v t="N80157">
+<vh>SCENE XII. Another part of the same.</vh>
+</v>
+<v t="N80381">
+<vh>SCENE XIII. Alexandria. Cleopatra's palace.</vh>
+</v>
+<v t="N80449">
+<vh>SCENE XIV. The same. Another room.</vh>
+</v>
+<v t="N81345">
+<vh>SCENE XV. The same. A monument.</vh>
+</v>
+</v>
+<v t="N81861">
+<vh>ACT V</vh>
+<v t="N81865">
+<vh>SCENE I. Alexandria. OCTAVIUS CAESAR's camp.</vh>
+</v>
+<v t="N82299">
+<vh>SCENE II. Alexandria. A room in the monument.</vh>
+</v>
 </v>
 </v>
 </vnodes>
@@ -108,43 +267,6 @@
     &lt;div class='pdetail' &gt;XML version by Jon Bosak, 1996-1998.&lt;/div&gt;
     &lt;div class='pdetail' &gt;This work may be freely copied and distributed worldwide.&lt;/div&gt;
     </t>
-<t tx="N65558"></t>
-<t tx="N65565"></t>
-<t tx="N65568"></t>
-<t tx="N65571"></t>
-<t tx="N65578"></t>
-<t tx="N65583"></t>
-<t tx="N65586"></t>
-<t tx="N65589"></t>
-<t tx="N65592"></t>
-<t tx="N65595"></t>
-<t tx="N65598"></t>
-<t tx="N65601"></t>
-<t tx="N65610"></t>
-<t tx="N65613"></t>
-<t tx="N65616"></t>
-<t tx="N65619"></t>
-<t tx="N65622"></t>
-<t tx="N65625"></t>
-<t tx="N65628"></t>
-<t tx="N65637"></t>
-<t tx="N65640"></t>
-<t tx="N65647"></t>
-<t tx="N65650"></t>
-<t tx="N65653"></t>
-<t tx="N65656"></t>
-<t tx="N65661"></t>
-<t tx="N65664"></t>
-<t tx="N65667"></t>
-<t tx="N65670"></t>
-<t tx="N65677"></t>
-<t tx="N65680"></t>
-<t tx="N65683"></t>
-<t tx="N65686"></t>
-<t tx="N65691"></t>
-<t tx="N65694"></t>
-<t tx="N65701"></t>
-<t tx="N65711"></t>
 <t tx="N65715">@language html
             &lt;div class='stagedir' &gt;Enter DEMETRIUS and PHILO&lt;/div&gt;
     &lt;div class='speaker' &gt;PHILO&lt;/div&gt;
@@ -964,7 +1086,6 @@
     &lt;div class='line' &gt;Or I'll unpeople Egypt.&lt;/div&gt;
     &lt;div class='stagedir' &gt;Exeunt&lt;/div&gt;
     </t>
-<t tx="N68747"></t>
 <t tx="N68751">@language html
             &lt;div class='stagedir' &gt;Enter POMPEY, MENECRATES, and MENAS, in
                 warlike manner&lt;/div&gt;
@@ -1435,7 +1556,7 @@
     &lt;div class='stagedir' &gt;Exeunt&lt;/div&gt;
     </t>
 <t tx="N70456">@language html
-    &lt;div class='stagedir' &gt;Enter MARK ANTONY, OCTAVIUS CAESAR, OCTAVIA between
+            &lt;div class='stagedir' &gt;Enter MARK ANTONY, OCTAVIUS CAESAR, OCTAVIA between
                 them, and Attendants&lt;/div&gt;
     &lt;div class='speaker' &gt;MARK ANTONY&lt;/div&gt;
     &lt;div class='line' &gt;The world and my great office will sometimes&lt;/div&gt;
@@ -2234,7 +2355,6 @@
     &lt;div class='line' &gt;Ho! Noble captain, come.&lt;/div&gt;
     &lt;div class='stagedir' &gt;Exeunt&lt;/div&gt;
     </t>
-<t tx="N73505"></t>
 <t tx="N73509">@language html
             &lt;div class='stagedir' &gt;Enter VENTIDIUS as it were in triumph, with SILIUS,
                 and other Romans, Officers, and Soldiers; the dead
@@ -3504,7 +3624,6 @@
     &lt;div class='line' &gt;Some way to leave him.&lt;/div&gt;
     &lt;div class='stagedir' &gt;Exit&lt;/div&gt;
     </t>
-<t tx="N78183"></t>
 <t tx="N78187">@language html
             &lt;div class='stagedir' &gt;Enter OCTAVIUS CAESAR, AGRIPPA, and MECAENAS, with
                 his Army; OCTAVIUS CAESAR reading a letter&lt;/div&gt;
@@ -4528,7 +4647,6 @@
     &lt;div class='line' &gt;But resolution, and the briefest end.&lt;/div&gt;
     &lt;div class='stagedir' &gt;Exeunt; those above bearing off MARK ANTONY's body&lt;/div&gt;
     </t>
-<t tx="N81861"></t>
 <t tx="N81865">@language html
             &lt;div class='stagedir' &gt;Enter OCTAVIUS CAESAR, AGRIPPA, DOLABELLA, MECAENAS,
                 GALLUS, PROCULEIUS, and others, his council of war&lt;/div&gt;
